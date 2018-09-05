@@ -20,8 +20,9 @@ parts/
 sdist/
 var/
 wheels/
-/.idea/
-/.id/
+*/.idea/
+*/.id/
+
 *.egg-info/
 .installed.cfg
 *.egg
