@@ -22,8 +22,8 @@ var/
 wheels/
 */.idea/
 */.id/
-.idea/*
-.id/*
+.idea/
+.id/
 
 
 *.egg-info/
