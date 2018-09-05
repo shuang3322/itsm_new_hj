@@ -15,7 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from customer import views as customer_views
+from producer import views as producer_views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    # path('admin/', admin.site.urls),
+    path('', customer_views.visit),
+    path('priducer', producer_views.visit),
+
 ]
