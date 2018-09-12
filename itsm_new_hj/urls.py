@@ -17,11 +17,14 @@ from django.contrib import admin
 from django.urls import path
 from customer import views as customer_views
 from producer import views as producer_views
+from indexapp import views as index_views
 
 urlpatterns = [
     # path('admin/', admin.site.urls),
-    path('', customer_views.visit),
+    path('customer', customer_views.visit),
     path('priducer', producer_views.visit),
+    path('', index_views.visit),
+
 
 ]
 
