@@ -4,4 +4,5 @@ from django.shortcuts import render
 from django.shortcuts import HttpResponse
 
 def  visit(request):
-    return HttpResponse("hello index")
+    print(request.META)
+    return HttpResponse(request.META)
