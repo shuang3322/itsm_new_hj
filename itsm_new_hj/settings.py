@@ -25,7 +25,7 @@ SECRET_KEY = 'xv*y*i()9#parcg836n%h^bf!xebk0nl!o6ho+_&s9+41-%0b*'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'indexapp',
 ]
 
 MIDDLEWARE = [
@@ -75,10 +76,17 @@ WSGI_APPLICATION = 'itsm_new_hj.wsgi.application'
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.sqlite3',
+    #     'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    # },
+    'default':{
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'ipdb',
+        'USER': 'root',
+        'PASSWORD': 'Shuang@123',
+        "HOST": "10.77.100.9",
+        "PORT":"3308",},
 }
 
 
@@ -119,3 +127,4 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
